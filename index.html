@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Makan Dorm - Easy Singapore Recipes for Hostel Living">
+  <title>Makan Dorm - Easy Singapore Recipes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">Makan Dorm</a>
+      <ul>
+        <li><a href="#meal-options">Meal Options</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Welcome to Makan Dorm</h1>
+      <p>Your go-to recipe site for easy and fast Singaporean, Asian, and home-cooked dishes.</p>
+      <a href="#meal-options" class="btn">Explore Recipes</a>
+    </section>
+
+    <section id="meal-options">
+      <h2>Choose Your Meal</h2>
+      <select id="meal-type">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
+        <option value="one-dish">One Dish</option>
+      </select>
+      <div id="recipes-list"></div>
+    </section>
+
+    <section id="subscribe">
+      <h2>Subscribe for More Recipes</h2>
+      <form id="subscribe-form">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Makan Dorm. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
