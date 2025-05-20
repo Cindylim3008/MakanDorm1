@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/style.css">
   <script src="../script.js"></script>
 </head>
+
 <body>
   <header>
     <nav>
@@ -21,14 +22,13 @@
   </header>
 
 
-
   <main>
     <section id="hero">
       <h1>🍞 Kaya Toast</h1>
       <p>A classic Singaporean breakfast made with kaya jam, butter, and toast.</p>
+      <br>
       <img src="../images/Kayatoast.png" alt="Kaya Toast" class="recipe-image">
     </section>
-
 
 <div class="container">
   <div class="bar-label">🧑‍🍳 Difficulty</div>
@@ -42,6 +42,17 @@
 
   <div class="bar-label">🔥 Calories</div>
   <div class="bar"><div class="bar-inner" style="width: 45%;">450 kcal</div></div>
+
+
+
+<div class="like-section">
+  <img src="../images/heart-outline.png" alt="Like" id="like-icon" class="like-icon">
+  <span id="like-count">0</span> Likes
+</div>
+
+
+
+
 
    <section id="tips" class="recipetext-box">
 
@@ -89,7 +100,8 @@
         <textarea id="comment-input" placeholder="Share your thoughts..." rows="4"></textarea>
         <button onclick="submitComment()">Post Comment</button>
       </div>
-      <div id="comment-list"></div>
+      <br>
+      <div id="comment-list" class="comment-list"></div>
     </section>
   </main>
 
@@ -97,6 +109,6 @@
     <p>&copy; 2025 MakanDorm. All rights reserved.</p>
   </footer>
 
-  <script src="scripts.js"></script>
+ 
 </body>
 </html>

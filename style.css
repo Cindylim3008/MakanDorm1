@@ -84,7 +84,7 @@ h1, h2, h3 {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: #4CAF50;
+  background-color: #8e5b21db;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -138,7 +138,7 @@ input[type="email"] {
 }
 button {
   padding: 0.5rem 1rem;
-  background-color: #4CAF50;
+  background-color: #6b4d22;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -146,7 +146,7 @@ button {
   margin-left: 1rem;
 }
 button:hover {
-  background-color: #45a049;
+  background-color: #c9982e;
 }
 footer {
   text-align: center;
@@ -207,13 +207,7 @@ input[type="email"] {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-button {
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-}
+
 footer {
   text-align: center;
   margin-top: 3rem;
@@ -241,23 +235,6 @@ footer {
   border: 1px solid #ccc;
 }
 
-button {
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #45a049;
-}
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: #fff;
-}
 
   
     .container {
@@ -323,4 +300,37 @@ footer {
   width: 500px;
   height: 4%;
 
+}
+
+
+.like-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.like-icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.like-icon:hover {
+  transform: scale(1.1);
+}
+
+
+ .comment-list {
+  background-color: #ffe4e4; /* Light grey background */
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  
+}
+
+.comment-list h2 {
+  color: #6b1d1d; /* Dark grey text for contrast */
 }

@@ -138,6 +138,7 @@ let likeCount = 0;
 const likeIcon = document.getElementById('like-icon');
 const likeCounter = document.getElementById('like-count');
 
+console.log('sfd')
 likeIcon.addEventListener('click', () => {
   console.log('sfd')
   liked = !liked;
