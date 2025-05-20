@@ -130,3 +130,25 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     alert('Please provide a message.');
   }
 });
+
+
+let liked = false;
+let likeCount = 0;
+
+const likeIcon = document.getElementById('like-icon');
+const likeCounter = document.getElementById('like-count');
+
+likeIcon.addEventListener('click', () => {
+  console.log('sfd')
+  liked = !liked;
+  
+  if (liked) {
+    likeCount++;
+    likeIcon.src = 'images/heart-filled.png'; // Replace with your filled heart image
+  } else {
+    likeCount--;
+    likeIcon.src = 'images/heart-outline.png'; // Replace with your outline heart image
+  }
+
+  likeCounter.textContent = likeCount;
+});
