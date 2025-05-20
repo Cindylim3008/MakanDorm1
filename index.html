@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Makan Dorm - Easy Singapore Recipes for Hostel Living">
+  <meta name="description" content="Makan Dorm - Easy Local Singapore Recipes for Dorm Living">
   <title>Makan Dorm - Easy Singapore Recipes</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <nav>
-      <a href="/" class="logo">Makan Dorm</a>
+      <a href="/" class="logo">Makan<span class="red">Dorm</span></a>
+
       <ul>
+        <li><a href="#feedback" class="feedback-link">Feedback</a></li>
+        <li><a href="#subscribe" class="subscribe-link">Subscribe</a></li>
+      </ul>
+
+     <ul>
         <li><a href="#meal-options">Meal Options</a></li>
         <li><a href="#subscribe">Subscribe</a></li>
-      </ul>
+      </ul></nav>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search recipes..." onkeyup="searchRecipes()">
+      </div>
     </nav>
   </header>
 
-  <main>
+  <main><center>
     <section id="hero">
       <h1>Welcome to Makan Dorm</h1>
-      <p>Your go-to recipe site for easy and fast Singaporean, Asian, and home-cooked dishes.</p>
+      <h3>Simple Recipes Dormitory Style - Easy 30-Minute Home-cooked Dishes </h3>
+
+      <p>Welcome to Makan Dorm, where we bring you the taste of home-cooked meals to your dorm kitchen. <br> Featuring easy to recreate, simple home-cooked authentic Singaporean and Asian recipes for students and young adults. Browse from our list of specially curated list of local and Asian dishes where you can easily recreate in your hostel or dormitory. Each recipe features readily available ingredients and easy to understand simple step-by-step instructions. <br> Be your own chef and enjoy these tasty dishes from your dorm.  </p>
       <a href="#meal-options" class="btn">Explore Recipes</a>
     </section>
 
     <section id="meal-options">
-      <h2>Choose Your Meal</h2>
-      <select id="meal-type">
-        <option value="breakfast">Breakfast</option>
-        <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
-        <option value="dessert">Dessert</option>
-        <option value="one-dish">One Dish</option>
-      </select>
-      <div id="recipes-list"></div>
-    </section>
+  <h2>Choose Your Meal</h2>
+  <select id="meal-type" onchange="redirectToRecipe()">
+    <option value=""><b>Select a meal</b></option>
+    <option value="/recipes/breakfast.html">Breakfast</option>
+    <option value="/recipes/lunch.html">Lunch</option>
+    <option value="/recipes/dinner.html">Dinner</option>
+    <option value="/recipes/dessert.html">Dessert</option>
+    <option value="/recipes/one-dish.html">One-Dish</option>
+  </select>
+  <div id="recipes-list"></div>
+</section>
+
+
+<script>
+  function redirectToRecipe() {
+    const selectedMeal = document.getElementById('meal-type').value;
+    if (selectedMeal) {
+      window.location.href = selectedMeal;
+    }
+  }
+</script>
+
 
     <section id="subscribe">
       <h2>Subscribe for More Recipes</h2>
@@ -43,7 +68,8 @@
         <input type="email" id="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
       </form>
-    </section>
+      
+    </section></center>
   </main>
 
   <footer>

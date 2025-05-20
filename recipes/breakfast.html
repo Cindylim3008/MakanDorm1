@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Easy and delicious Singaporean breakfast recipes perfect for dorm living.">
+  <title>Breakfast Recipes – MakanDorm</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">Makan<span class="red">Dorm</span></a>
+      <ul>
+        <li><a href="#feedback" class="feedback-link">Feedback</a></li>
+        <li><a href="#subscribe" class="subscribe-link">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <section id="hero">
+      <h1>Start Your Day Right with Easy Breakfast Recipes</h1>
+      <p>Quick, delicious, and dorm-friendly home-cooked breakfast ideas to fuel your morning.</p>
+      
+    </section>
+
+
+
+    <!--
+
+     <li><a href="#meal-options">Meal Options</a></li>
+
+
+    <input type="search" id="search-recipes" placeholder="Search recipes..." aria-label="Search recipes">
+    
+    
+    
+    -->
+
+<center>
+<section id="meal-options">
+  <h3>Choose Your Meal</h3>
+  <select id="meal-type" onchange="redirectToRecipe()">
+    <option value=""><b>Select a meal</b></option>
+    <option value="/recipes/breakfast.html">Breakfast</option>
+    <option value="/recipes/lunch.html">Lunch</option>
+    <option value="/recipes/dinner.html">Dinner</option>
+    <option value="/recipes/dessert.html">Dessert</option>
+    <option value="/recipes/one-dish.html">One-Dish</option>
+  </select>
+  <div id="recipes-list"></div>
+</section>
+
+<script>
+  function redirectToRecipe() {
+    const selectedMeal = document.getElementById('meal-type').value;
+    if (selectedMeal) {
+      window.location.href = selectedMeal;
+    }
+  }
+</script>
+</center>
+
+
+    <section id="featured-recipes">
+      <h2><center>Featured Breakfast Recipes</center><br></h2>
+
+      <div class="recipe-list">
+        <article class="recipe">
+          <img src="recipe1.jpg" alt="Recipe 1">
+          <h3>Simple Kaya Toast</h3>
+          <p>A classic Singaporean breakfast made with kaya jam, butter, and toast.</p>
+          <a href="kayatoast.html">View Recipe</a>
+        </article>
+
+        <article class="recipe">
+          <img src="recipe2.jpg" alt="Recipe 2">
+          <br>
+          <h3>Soft Boiled Eggs</h3>
+          <p>A brief description of Recipe 2.</p>
+          <a href="recipe2.html">View Recipe</a>
+        </article>
+
+        <article class="recipe">
+          <img src="recipe3.jpg" alt="Recipe 3">
+          <h3>Peanut Porridge</h3>
+          <p>A brief description of Recipe 3.</p>
+          <a href="recipe3.html">View Recipe</a>
+        </article>
+
+        <article class="recipe">
+          <img src="recipe4.jpg" alt="Recipe 4">
+          <h3>Oatmeal with Soy Milk and Gula Melaka</h3>
+          <p>A brief description of Recipe 4.</p>
+          <a href="recipe4.html">View Recipe</a>
+        </article>
+
+        <article class="recipe">
+          <img src="recipe5.jpg" alt="Recipe 5">
+          <h3>Fried Bee Hoon (Rice Vermicelli))</h3>
+          <p>A brief description of Recipe 5.</p>
+          <a href="recipe5.html">View Recipe</a>
+        </article>
+
+        <article class="recipe">
+          <img src="recipe6.jpg" alt="Recipe 6">
+          <h3>Pancake with Peanut Butter Sauce</h3>
+          <p>A brief description of Recipe 6.</p>
+          <a href="recipe6.html">View Recipe</a>
+        </article>
+        <!-- Add more recipes as needed -->
+      </div>
+    </section>
+
+
+    <section id="subscribe">
+      <h2>Subscribe for More Recipes</h2>
+      <form id="subscribe-form">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Makan Dorm. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
