@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  console.log(1)
   const mealTypeSelect = document.getElementById('meal-type');
   const recipesList = document.getElementById('recipes-list');
 
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+  console.log(2)
   const mealTypeSelect = document.getElementById('meal-type');
   const recipesList = document.getElementById('recipes-list');
   const searchInput = document.getElementById('search-input');
@@ -49,21 +51,25 @@ document.addEventListener('DOMContentLoaded', function() {
     'one-dish': ['Claypot Rice', 'Nasi Goreng', 'Pasta'],
   };
 
-  mealTypeSelect.addEventListener('change', function() {
-    const selectedMeal = mealTypeSelect.value;
-    const mealRecipes = recipes[selectedMeal] || [];
-    displayRecipes(mealRecipes);
-  });
+  if (mealTypeSelect) {
+    mealTypeSelect.addEventListener('change', function() {
+      const selectedMeal = mealTypeSelect.value;
+      const mealRecipes = recipes[selectedMeal] || [];
+      displayRecipes(mealRecipes);
+    });
+  }
 
-  searchInput.addEventListener('input', function() {
-    const query = searchInput.value.toLowerCase();
-    const selectedMeal = mealTypeSelect.value;
-    const mealRecipes = recipes[selectedMeal] || [];
-    const filteredRecipes = mealRecipes.filter(recipe =>
-      recipe.toLowerCase().includes(query)
-    );
-    displayRecipes(filteredRecipes);
-  });
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const query = searchInput.value.toLowerCase();
+      const selectedMeal = mealTypeSelect.value;
+      const mealRecipes = recipes[selectedMeal] || [];
+      const filteredRecipes = mealRecipes.filter(recipe =>
+        recipe.toLowerCase().includes(query)
+      );
+      displayRecipes(filteredRecipes);
+    });
+  }
 
   function displayRecipes(mealRecipes) {
     recipesList.innerHTML = '';
@@ -81,7 +87,58 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Initialize with default meal type
-  mealTypeSelect.dispatchEvent(new Event('change'));
+  if (mealTypeSelect) {
+    mealTypeSelect.dispatchEvent(new Event('change'));
+  }
+
+  const feedbackForm = document.getElementById('feedbackForm');
+  if (feedbackForm) {
+    feedbackForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      if (message.trim()) {
+        // Here, you can handle the form submission, e.g., send data to a server
+        console.log('Feedback Submitted:', { name, email, message });
+
+        // Show success message
+        document.getElementById('successMessage').classList.remove('hidden');
+
+        // Optionally, clear the form
+        document.getElementById('feedbackForm').reset();
+      } else {
+        alert('Please provide a message.');
+      }
+    });
+  }
+
+
+  let liked = false;
+  let likeCount = 0;
+
+  const likeIcon = document.getElementById('like-icon');
+  const likeCounter = document.getElementById('like-count');
+
+  console.log(likeIcon);
+  console.log('sfd')
+  likeIcon.addEventListener('click', () => {
+    console.log('sfd')
+    liked = !liked;
+    
+    if (liked) {
+      likeCount++;
+      likeIcon.src = '../images/heart-filled.png'; // Replace with your filled heart image
+    } else {
+      likeCount--;
+      likeIcon.src = '../images/heart-outline.png'; // Replace with your outline heart image
+    }
+
+    likeCounter.textContent = likeCount;
+  });
+
 });
 
 function submitComment() {
@@ -109,47 +166,3 @@ function submitComment() {
   }
 }
 
-
-document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-
-  if (message.trim()) {
-    // Here, you can handle the form submission, e.g., send data to a server
-    console.log('Feedback Submitted:', { name, email, message });
-
-    // Show success message
-    document.getElementById('successMessage').classList.remove('hidden');
-
-    // Optionally, clear the form
-    document.getElementById('feedbackForm').reset();
-  } else {
-    alert('Please provide a message.');
-  }
-});
-
-
-let liked = false;
-let likeCount = 0;
-
-const likeIcon = document.getElementById('like-icon');
-const likeCounter = document.getElementById('like-count');
-
-console.log('sfd')
-likeIcon.addEventListener('click', () => {
-  console.log('sfd')
-  liked = !liked;
-  
-  if (liked) {
-    likeCount++;
-    likeIcon.src = 'images/heart-filled.png'; // Replace with your filled heart image
-  } else {
-    likeCount--;
-    likeIcon.src = 'images/heart-outline.png'; // Replace with your outline heart image
-  }
-
-  likeCounter.textContent = likeCount;
-});

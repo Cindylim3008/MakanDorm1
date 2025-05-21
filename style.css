@@ -144,6 +144,12 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin-left: 1rem;
+    border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
 }
 button:hover {
   background-color: #c9982e;
@@ -334,3 +340,99 @@ footer {
 .comment-list h2 {
   color: #6b1d1d; /* Dark grey text for contrast */
 }
+
+
+.container2 {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.feedback-box {
+  background: white;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-section {
+  flex: 1;
+  background-color: #2c9a8f;
+  color: white;
+  padding: 30px;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contact-section .note {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+.form-section {
+  flex: 2;
+  padding: 30px;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #ea4e4e;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+@media screen and (max-width: 768px) {
+  .feedback-box {
