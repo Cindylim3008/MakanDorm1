@@ -198,6 +198,8 @@ footer {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+
 .recipe {
   background-color: #fff;
   border-radius: 5px;
@@ -207,8 +209,8 @@ footer {
   text-align: center;
 }
 .recipe img {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 200px;
   border-radius: 5px;
 }
 #subscribe {
@@ -217,6 +219,28 @@ footer {
 }
 
 
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.categoryoption {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 1rem);
+  padding: 1rem;
+  text-align: center;
+}
+
+.categoryoption img {
+  width: 400px;      /* or any fixed width you want */
+  height: 280px;     /* or use auto to maintain aspect ratio */
+  object-fit: cover; /* ensures the image fills the box neatly */
+  border-radius: 5px; /* optional: matches card style */
+  margin-bottom: 10px; /* optional spacing */
+}
 
 footer {
   text-align: center;
@@ -429,9 +453,7 @@ input, textarea {
   resize: vertical;
 }
 
-textarea {
-  min-height: 100px;
-}
+
 
 
 .button_Subscribe {
@@ -555,4 +577,10 @@ form button {
 
 form button:hover {
   background-color: #c73535;
+}
+
+.foodimage {
+  width: 167px;
+  height: 100px;
+  border-radius: 10%;
 }

@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mealTypeSelect.dispatchEvent(new Event('change'));
   }
 
-  const feedbackForm = document.getElementById('feedbackForm');
+  const feedbackForm = document.getElementById('feedback-form');
   if (feedbackForm) {
     feedbackForm.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const message = document.getElementById('message').value;
 
       if (message.trim()) {
+        /*
         // Here, you can handle the form submission, e.g., send data to a server
         console.log('Feedback Submitted:', { name, email, message });
 
@@ -109,6 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Optionally, clear the form
         document.getElementById('feedbackForm').reset();
+*/
+        location.href = "Thankyou_Feedback.html"
       } else {
         alert('Please provide a message.');
       }
