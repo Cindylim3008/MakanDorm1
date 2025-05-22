@@ -165,7 +165,20 @@ function submitComment() {
     commentList.appendChild(newComment);
     commentInput.value = '';
   } else {
-    alert('Please enter a comment before submitting.');
+    alert('Please enter comments or message before submitting.');
   }
 }
 
+function submitEmail() {
+  // Get the email input field
+  var emailField = document.getElementById("email");
+
+  // Check if the field is empty
+  if (!emailField.value.trim()) {
+    alert("Please fill in your email before submitting");
+    return false;
+  }
+
+  // If email is filled, redirect to thank you page
+  window.location.href = "Thankyou_Sub.html";
+}

@@ -679,3 +679,32 @@ form button:hover {
   max-width: 100%;     /* Prevents overflow on small screens */
   height: auto;        /* Keeps the image aspect ratio */
 }
+
+.glitter-text {
+  font-size: 2em;
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #d8d7d7 20%,
+    #7a6212 60%,   /* gold glitter */
+    #fff 60%,
+    #d8d7d7 80%,
+    #fff 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
