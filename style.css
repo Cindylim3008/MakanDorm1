@@ -211,7 +211,9 @@ footer {
 }
 .recipe img {
   width: 300px;
+  max-width: auto;
   height: 200px;
+  max-height: auto;
   border-radius: 5px;
 }
 #subscribe {
@@ -670,4 +672,10 @@ form button:hover {
   .highlight-content {
     padding: 20px;
   }
+}
+
+.responsive-image {
+  width: 300px;        /* Preset default width */
+  max-width: 100%;     /* Prevents overflow on small screens */
+  height: auto;        /* Keeps the image aspect ratio */
 }
