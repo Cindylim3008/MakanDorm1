@@ -649,6 +649,10 @@ form button:hover {
   justify-content: center;
 }
 
+.parent-container2 {
+  text-align: center;
+}
+
 .highlight-tag {
   background-color: #faae42;
   color: white;
@@ -658,6 +662,10 @@ form button:hover {
   font-size: 0.8rem;
   display: inline-block;
   margin-bottom: 10px;
+  max-width: 120px;         /* Adjust this value as needed */
+  overflow: hidden;         /* Prevent overflow if needed */
+  text-overflow: ellipsis;  /* Add "..." if text is too long */
+  white-space: nowrap;      /* Keep it on one line */
 }
 
 .highlight-content h2 {
@@ -670,6 +678,7 @@ form button:hover {
   color: #444;
   font-size: 1rem;
   margin-bottom: 15px;
+
 }
 
 .highlight-meta {
