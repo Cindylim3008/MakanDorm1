@@ -42,12 +42,19 @@
       <p><center><img src="images/AsianFood_HP.png" width="50%" height="40%"></center></p>
       <br>
 
-      <p>Welcome to Makan Dorm, where we bring you the taste of home-cooked meals to your dorm kitchen. <br> Featuring easy to recreate, simple home-cooked authentic Singaporean and Asian recipes for students and young adults. Browse from our list of specially curated list of local and Asian dishes where you can easily recreate in your hostel or dormitory. Each recipe features readily available ingredients and easy to understand simple step-by-step instructions. <br> Be your own chef and enjoy these tasty dishes from your dorm.  </p>
+      <p>Welcome to Makan Dorm, where we bring you the taste of home-cooked meals to your dorm kitchen. <br> Featuring easy to recreate, simple home-cooked authentic Singaporean and Asian recipes for students and young adults. Browse from our list of specially curated list of local and Asian dishes where you can easily recreate in your hostel or dormitory. Each recipe features readily available ingredients and easy to understand simple step-by-step instructions. <br> Be your own chef and enjoy these tasty dishes from your dorm.
+      </p>
+      <br><img src="/images/MDlogo.png" alt="MDlogo">  
+     </section>
+
+      <!--
       <br><img src="/images/MDlogo.png" alt="MDlogo" /> <br>
       <a href="/recipes/allrecipes.html" class="btn">Explore Recipes</a>
+      -->
     </section>
 
-    <section id="meal-options">
+  
+  <section id="meal-options">
   <h2>Choose Your Meal</h2>
   <select id="meal-type" onchange="redirectToRecipe()">
     <option value=""><b>Select a meal</b></option>
@@ -70,11 +77,42 @@
   }
 </script>
 
+ <!--Section on Highlight - Recipe of the week-->
+<br>
+
+ <h2>Highlight - Recipe of the Week</h2>
+<section id="recipe-highlight">
+  <div class="recipe-highlight-box">
+    <div class="highlight-image">
+      <img src="images/Kayatoast.png" alt="Kaya Toast">
+    </div>
+    <div class="highlight-content">
+      <span class="highlight-tag">Breakfast</span>
+      <h2>Simple Kaya Toast</h2>
+      <p>A classic Singaporean breakfast made with Kaya jam, butter, and toast.</p>
+      <div class="highlight-meta">
+        <span>⏱ Prep: 10 mins</span>
+        <span>🍳 Cook: 15 mins</span>
+        <span>✅ Easy</span>
+        <span>⭐ 450 calories</span>
+        <span>💚 15 likes</span>
+      </div>
+      <br>
+      <a href="/recipes/kayatoast.html" class="highlight-btn">View Recipe</a>
+    </div>
+  </div>
+</section>
+<!--end of Highlight - Recipe of the week section-->
+
+<p>
+      <!--<br><img src="/images/MDlogo.png" alt="MDlogo" /> <br>-->
+      <a href="/recipes/allrecipes.html" class="btn">Explore More Recipes</a>
+</p>
+
     
     <section id="subscribe">
       <h2>Subscribe for More Recipes</h2>
       <br>
-  
       
         <input type="email" id="email" placeholder="Enter your email" required>
         <button class='button_Subscribe' onclick="location.href='Thankyou_Sub.html'">Subscribe</button>
@@ -83,8 +121,16 @@
     </section></center>
   </main>
 
+  <p>
+  <br>
+  <a href="#top"><div style='text-align:center'>Back to Top</div></a>
+  </p>
+
   <footer>
-    <p>&copy; 2025 Makan Dorm. All rights reserved.</p>
+    <p style="font-size: 15px;">2025 Makan Dorm. All rights reserved.</p>
+    <p style="font-size: 10px;">Disclaimer:
+      <br>This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website.</p>
+
   </footer>
 
   <script src="script.js"></script>
