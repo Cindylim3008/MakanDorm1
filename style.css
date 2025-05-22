@@ -50,10 +50,12 @@ nav a {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
+  transition: all 0.2s ease;  /* Smooth transition */
 }
 
 .subscribe-link:hover {
   background-color: #d32f2f; /* Darker red on hover */
+  transform: scale(1.05);     /* Slightly enlarge on hover */
 }
 
 /* Position the 'Feedback' link to the top-right */
@@ -68,10 +70,12 @@ nav a {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
+  transition: all 0.2s ease;  /* Smooth transition */
 }
 
 .feedback-link:hover {
   background-color: #d32f2f; /* Darker red on hover */
+  transform: scale(1.05);     /* Slightly enlarge on hover */
 }
 
 
@@ -91,7 +95,14 @@ h1, h2, h3 {
   border-radius: 5px;
   margin-top: 1rem;
   font-weight: bold;
+  transition: all 0.3s ease;  /* Smooth transition */
 }
+
+.btn:hover {
+  background-color: #c73232;
+  transform: scale(1.05);     /* Slightly enlarge on hover */
+}
+
 
 .btn-2 {
   display: inline-block;
@@ -102,7 +113,15 @@ h1, h2, h3 {
   border-radius: 5px;
   margin-top: 1rem;
   font-weight: bold;
+  transition: all 0.3s ease;  /* Smooth transition */
 }
+
+
+.btn-2:hover {
+  background-color: #c78e32;
+  transform: scale(1.05);     /* Slightly enlarge on hover */
+}
+
 #meal-options {
   margin-top: 2rem;
 }
@@ -474,7 +493,14 @@ input, textarea {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  transition: all 0.2s ease;  /* Smooth transition */
 }
+
+.button_Subscribe:hover {
+  background-color: #c78e32;
+  transform: scale(1.05);     /* Slightly enlarge on hover */
+}
+
 
 @media screen and (max-width: 768px) {
   .feedback-box {
@@ -669,7 +695,8 @@ form button:hover {
 }
 
 .highlight-btn:hover {
-  background-color: #c73232;
+  background-color: #f52d2d;
+  transform: scale(1.05);     /* Slightly enlarge on hover */
 }
 
 @media (max-width: 768px) {
