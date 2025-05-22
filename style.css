@@ -32,7 +32,8 @@ nav ul li {
 }
 
 nav a {
-  color: white;
+  color: rgb(214, 162, 162);
+  font-weight: bold;
   text-decoration: none;
   font-size: 16px;
 }
@@ -85,6 +86,17 @@ h1, h2, h3 {
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: #8e5b21db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.btn-2 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #ad4531db;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -707,4 +719,15 @@ form button:hover {
   100% {
     background-position: 200% center;
   }
+}
+
+
+.ingredient-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;           /* Sets text color to black */
+  margin: auto;         /* Automatically center inside parent */
+  width: fit-content;   /* Optional: shrink to content */
+  height: fit-content;  /* Optional: shrink to content */
 }
