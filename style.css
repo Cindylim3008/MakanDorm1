@@ -103,6 +103,15 @@ h1, h2, h3 {
   transform: scale(1.05);     /* Slightly enlarge on hover */
 }
 
+.homeicon{
+    transition: all 0.3s ease;  /* Smooth transition */
+}
+
+.homeicon:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.05);     /* Slightly enlarge on hover */
+}
+
 
 .btn-2 {
   display: inline-block;
@@ -660,6 +669,11 @@ form button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.allrecipe {
+  text-align: center;        /* Centers inline content like images */
+  margin-bottom: 20px;       /* Optional spacing */
 }
 
 .allrecipe img {
