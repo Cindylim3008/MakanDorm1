@@ -664,7 +664,7 @@ form button:hover {
 
 .allrecipe img {
   width: 100%;
-  max-width: 400px;
+  max-width: 480px;
   height: auto;
   object-fit: cover;
   display: block;
