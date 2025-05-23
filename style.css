@@ -664,7 +664,7 @@ form button:hover {
 
 .allrecipe img {
   width: 100%;
-  max-width: 580px;
+  max-width: 500px;
   height: auto;
   object-fit: cover;
   display: block;
@@ -777,8 +777,9 @@ form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 20px 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
 }
 
 .ingredient-link nav {
@@ -806,4 +807,68 @@ form button:hover {
 
 .ingredient-link li a:hover {
   background-color: #f4f4f4;
+}
+
+#meal-categories {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.category-item {
+  flex: 1 1 250px;  /* flex-grow, flex-shrink, flex-basis */
+  max-width: 250px;
+  min-width: 200px;  /* Optional for responsiveness */
+  background-color: #eee;  /* Just for visibility */
+  padding: 20px;
+  text-align: center;
+}
+.category-card {
+  background-color: #ffeaea;
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #e84545;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.category-card img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  background-color: #ffdcdc;
+}
+
+.category-card p {
+  font-size: 16px;
+  margin: 0;
 }
