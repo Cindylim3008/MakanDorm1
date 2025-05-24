@@ -180,5 +180,5 @@ function submitEmail() {
   }
 
   // If email is filled, redirect to thank you page
-  window.location.href = "Thankyou_Sub.html";
+  window.location.href = "/Thankyou_Sub.html";
 }
